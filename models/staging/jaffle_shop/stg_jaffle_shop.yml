@@ -27,3 +27,13 @@ models:
           - relationships:
               to: ref('stg_customers')
               field: customer_id
+  - name: flatten_json
+    columns: 
+      - name: insert_ts
+        tests:
+          - unique
+          - not_null
+      - name: id
+        tests:
+          - unique
+          - not_null
